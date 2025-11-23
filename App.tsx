@@ -6,7 +6,6 @@ import { Features } from './components/Features';
 import { Pricing } from './components/Pricing';
 import { PackInstalacion } from './components/PackInstalacion';
 import { Transparency } from './components/Transparency';
-import { Promo } from './components/Promo';
 import { FAQ } from './components/FAQ';
 import { AboutFooter } from './components/AboutFooter';
 import { StarBackground } from './components/ui/StarBackground';
@@ -31,7 +30,6 @@ const App: React.FC = () => {
         <Pricing />
         <PackInstalacion />
         <Transparency />
-        <Promo />
         <FAQ />
       </main>
 

@@ -116,21 +116,13 @@ export const Hero: React.FC = () => {
         </div>
 
         {/* 3. Buttons */}
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+        <div className="flex justify-center items-center">
           <Button
             variant="accent"
             href="#promo"
             className="text-lg px-10 py-4 rounded-full shadow-[0_0_25px_rgba(245,158,11,0.3)] hover:shadow-[0_0_50px_rgba(245,158,11,0.6)] border border-accent-500/50 hover:scale-105 transition-transform duration-300"
           >
             Empezar prueba de 7 días
-          </Button>
-
-          <Button
-            variant="outline"
-            href="#features"
-            className="text-lg px-10 py-4 rounded-full border-primary-500/40 text-primary-400 hover:bg-primary-950/50 hover:text-primary-300 hover:shadow-[0_0_25px_rgba(6,182,212,0.3)] hover:scale-105 transition-transform duration-300 backdrop-blur-sm"
-          >
-            Ver cómo funciona
           </Button>
         </div>
       </div>

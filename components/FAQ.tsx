@@ -12,11 +12,11 @@ export const FAQ: React.FC = () => {
         },
         {
             question: '¿Es difícil de configurar?',
-            answer: 'Es muy intuitivo. Además, tienes acceso a nuestra academia con vídeos paso a paso. Si prefieres que lo hagamos nosotros, solicita el Pack de Puesta a Punto.'
+            answer: 'Es muy intuitivo. Además, tienes acceso a nuestra academia con vídeos paso a paso. Y recuerda: con el Pack de Puesta en Marcha, nosotros te lo dejamos todo configurado el primer día para que no tengas que pelearte con la tecnología.'
         },
         {
             question: '¿Qué pasa si me paso del saldo de mensajes?',
-            answer: 'El sistema tiene una recarga automática de seguridad (ej. 10€) para que tus clientes nunca se queden sin respuesta. Tú tienes el control.'
+            answer: 'El sistema tiene una recarga automática de seguridad (ej. 10€) para que tus clientes nunca se queden sin respuesta. Tú estableces los límites en tu panel de control para tener siempre el gasto controlado.'
         }
     ];
 
@@ -47,7 +47,7 @@ export const FAQ: React.FC = () => {
                             </button>
 
                             <div
-                                className={`overflow-hidden transition-all duration-300 ${openIndex === idx ? 'max-h-40' : 'max-h-0'
+                                className={`overflow-hidden transition-all duration-300 ${openIndex === idx ? 'max-h-60' : 'max-h-0'
                                     }`}
                             >
                                 <div className="px-6 pb-5 text-slate-300 leading-relaxed">
