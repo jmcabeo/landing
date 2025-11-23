@@ -1,12 +1,12 @@
 import React from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
-import { TargetAudience } from './components/TargetAudience';
 import { ProblemSolution } from './components/ProblemSolution';
 import { Features } from './components/Features';
-import { Addons } from './components/Addons';
-import { Process } from './components/Process';
+import { Pricing } from './components/Pricing';
+import { Transparency } from './components/Transparency';
 import { Promo } from './components/Promo';
+import { FAQ } from './components/FAQ';
 import { AboutFooter } from './components/AboutFooter';
 import { StarBackground } from './components/ui/StarBackground';
 import { CursorTrail } from './components/ui/CursorTrail';
@@ -25,14 +25,15 @@ const App: React.FC = () => {
 
       <main className="flex-grow relative z-10">
         <Hero />
-        <Features />
-        <TargetAudience />
         <ProblemSolution />
-        <Process />
-        <Addons />
+        <Features />
+        <Pricing />
+        <Transparency />
         <Promo />
-        <AboutFooter />
+        <FAQ />
       </main>
+
+      <AboutFooter />
     </div>
   );
 };
