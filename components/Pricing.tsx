@@ -10,6 +10,7 @@ export const Pricing: React.FC = () => {
             medal: '🥉',
             subtitle: 'Para dejar el papel y boli',
             price: '69',
+            price2025: '117',
             features: [
                 { text: 'Agenda Online 24/7 (Reservas auto)', included: true },
                 { text: 'App Móvil de Gestión (iOS/Android)', included: true },
@@ -26,6 +27,7 @@ export const Pricing: React.FC = () => {
             medal: '🥈',
             subtitle: 'La máquina de facturar. Elimina plantones',
             price: '97',
+            price2025: '165',
             badge: '🔥 MÁS POPULAR',
             features: [
                 { text: 'Todo lo del Plan Starter incluido', included: true },
@@ -42,6 +44,7 @@ export const Pricing: React.FC = () => {
             medal: '🥇',
             subtitle: 'Tu recepcionista digital con Inteligencia Artificial',
             price: '197',
+            price2025: '335',
             features: [
                 { text: 'Todo lo del Plan Crecimiento incluido', included: true },
                 { text: 'Agente IA WhatsApp: Responde y agenda 24/7', included: true, highlight: true },
@@ -90,9 +93,15 @@ export const Pricing: React.FC = () => {
 
                         {/* Price */}
                         <div className="text-center mb-8">
+                            <div className="text-sm text-slate-500 line-through mb-2">
+                                Precio 2025: {plan.price2025}€
+                            </div>
                             <div className="flex items-baseline justify-center">
                                 <span className="text-5xl font-bold text-accent-400">{plan.price}€</span>
                                 <span className="text-slate-400 ml-2">/ mes</span>
+                            </div>
+                            <div className="text-sm text-primary-300 mt-2 font-medium">
+                                Ahora {plan.price}€
                             </div>
                         </div>
 
@@ -132,8 +141,15 @@ export const Pricing: React.FC = () => {
                 ))}
             </div>
 
+            {/* Lifetime Price Lock */}
+            <div className="mt-8 text-center">
+                <p className="text-lg text-accent-300 font-semibold">
+                    Bloquea este precio de por vida contratando hoy.
+                </p>
+            </div>
+
             {/* Note about VIP Pack */}
-            <div className="mt-12 text-center max-w-3xl mx-auto">
+            <div className="mt-8 text-center max-w-3xl mx-auto">
                 <p className="text-sm text-slate-400 italic">
                     <strong>Nota:</strong> Para asegurar que tu sistema funciona al 100% desde el primer día y tener tu web lista, recomendamos activar el 'Pack de Puesta en Marcha VIP' durante el proceso de compra.
                 </p>

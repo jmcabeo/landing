@@ -50,6 +50,13 @@ export const Hero: React.FC = () => {
 
       {/* 1. Logo Section */}
       <div className="relative z-20 mb-12 flex flex-col items-center animate-float">
+        {/* Urgency Bar */}
+        <div className="mb-6 px-6 py-3 bg-red-500/10 border-2 border-red-500/50 rounded-full backdrop-blur-md animate-pulse">
+          <p className="text-sm md:text-base text-red-300 font-semibold text-center">
+            ⚠️ OFERTA CIERRE 2024: Setup bonificado solo hasta el 31 de Diciembre.
+          </p>
+        </div>
+
         {/* Logo Container */}
         <div className="relative w-56 h-56 md:w-72 md:h-72 mb-8">
           <div className="w-full h-full relative flex items-center justify-center group">
@@ -95,7 +102,8 @@ export const Hero: React.FC = () => {
       {/* 2. Main Title Area */}
       <div className="relative z-20 text-center max-w-5xl mx-auto">
         <h1 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight drop-shadow-2xl">
-          Tu Negocio, <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-300 via-accent-400 to-accent-500 drop-shadow-[0_0_35px_rgba(245,158,11,0.6)]">Lleno en Piloto Automático</span>
+          Tu Negocio, <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-300 via-accent-400 to-accent-500 drop-shadow-[0_0_35px_rgba(245,158,11,0.6)]">Lleno</span><br />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-300 via-accent-400 to-accent-500 drop-shadow-[0_0_35px_rgba(245,158,11,0.6)]">en Piloto Automático</span>
         </h1>
 
         <p className="text-lg md:text-xl text-slate-300 mb-8 max-w-3xl mx-auto font-light leading-relaxed drop-shadow-md">
@@ -103,15 +111,15 @@ export const Hero: React.FC = () => {
         </p>
 
         {/* Trust Badges */}
-        <div className="flex flex-wrap justify-center gap-4 mb-8 text-sm text-slate-400">
-          <span className="flex items-center px-4 py-2 rounded-full bg-slate-900/50 border border-slate-700/20 backdrop-blur-sm">
-            Sin permanencia
+        <div className="flex flex-wrap justify-center gap-6 mb-8 text-sm text-slate-300">
+          <span className="flex items-center gap-2">
+            <span className="text-primary-400">✓</span> Sin permanencia
           </span>
-          <span className="flex items-center px-4 py-2 rounded-full bg-slate-900/50 border border-slate-700/20 backdrop-blur-sm">
-            Instalación inmediata
+          <span className="flex items-center gap-2">
+            <span className="text-primary-400">✓</span> Instalación inmediata
           </span>
-          <span className="flex items-center px-4 py-2 rounded-full bg-slate-900/50 border border-slate-700/20 backdrop-blur-sm">
-            Soporte en Español
+          <span className="flex items-center gap-2">
+            <span className="text-primary-400">✓</span> Soporte en Español
           </span>
         </div>
 
@@ -122,7 +130,7 @@ export const Hero: React.FC = () => {
             href="#promo"
             className="text-lg px-10 py-4 rounded-full shadow-[0_0_25px_rgba(245,158,11,0.3)] hover:shadow-[0_0_50px_rgba(245,158,11,0.6)] border border-accent-500/50 hover:scale-105 transition-transform duration-300"
           >
-            Empezar prueba de 7 días
+            VER OFERTA LIMITADA
           </Button>
         </div>
       </div>

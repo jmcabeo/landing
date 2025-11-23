@@ -7,6 +7,10 @@ export const FAQ: React.FC = () => {
 
     const faqs = [
         {
+            question: '¿Por qué sube el precio después de Diciembre?',
+            answer: 'Estamos ofreciendo condiciones de "Fundador" a los negocios que entren antes de fin de año. A partir de enero, la cuota de instalación volverá a su precio estándar de 1.200€ y las mensualidades subirán un 70%. Si entras hoy, mantienes tu precio reducido para siempre.'
+        },
+        {
             question: '¿Hay permanencia?',
             answer: 'No. OMNIA es un servicio mensual. Puedes cancelar cuando quieras con un solo clic desde tu panel.'
         },
