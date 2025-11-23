@@ -13,13 +13,13 @@ export const CursorTrail: React.FC = () => {
   const counterRef = useRef<number>(0);
 
   useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
+    const addPoint = (x: number, y: number) => {
       counterRef.current += 1;
       // Only add a point every few frames to improve performance and style
       if (counterRef.current % 2 === 0) {
         const newPoint = {
-          x: e.clientX,
-          y: e.clientY,
+          x,
+          y,
           id: Date.now() + Math.random(),
           life: 1.0
         };
@@ -27,10 +27,31 @@ export const CursorTrail: React.FC = () => {
       }
     };
 
+    const handleMouseMove = (e: MouseEvent) => {
+      addPoint(e.clientX, e.clientY);
+    };
+
+    const handleTouchMove = (e: TouchEvent) => {
+      e.preventDefault();
+      if (e.touches.length > 0) {
+        const touch = e.touches[0];
+        addPoint(touch.clientX, touch.clientY);
+      }
+    };
+
+    const handleTouchStart = (e: TouchEvent) => {
+      if (e.touches.length > 0) {
+        const touch = e.touches[0];
+        addPoint(touch.clientX, touch.clientY);
+      }
+    };
+
     window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('touchmove', handleTouchMove, { passive: false });
+    window.addEventListener('touchstart', handleTouchStart, { passive: true });
 
     const animate = () => {
-      setPoints(prev => 
+      setPoints(prev =>
         prev
           .map(p => ({ ...p, life: p.life - 0.03 }))
           .filter(p => p.life > 0)
@@ -42,6 +63,8 @@ export const CursorTrail: React.FC = () => {
 
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('touchmove', handleTouchMove);
+      window.removeEventListener('touchstart', handleTouchStart);
       cancelAnimationFrame(requestRef.current);
     };
   }, []);
