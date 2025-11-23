@@ -32,7 +32,7 @@ export const CursorTrail: React.FC = () => {
     };
 
     const handleTouchMove = (e: TouchEvent) => {
-      e.preventDefault();
+      // Don't prevent default - allow native scrolling
       if (e.touches.length > 0) {
         const touch = e.touches[0];
         addPoint(touch.clientX, touch.clientY);
@@ -47,7 +47,7 @@ export const CursorTrail: React.FC = () => {
     };
 
     window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('touchmove', handleTouchMove, { passive: false });
+    window.addEventListener('touchmove', handleTouchMove, { passive: true });
     window.addEventListener('touchstart', handleTouchStart, { passive: true });
 
     const animate = () => {
