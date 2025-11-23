@@ -4,6 +4,7 @@ import { Hero } from './components/Hero';
 import { ProblemSolution } from './components/ProblemSolution';
 import { Features } from './components/Features';
 import { Pricing } from './components/Pricing';
+import { PackInstalacion } from './components/PackInstalacion';
 import { Transparency } from './components/Transparency';
 import { Promo } from './components/Promo';
 import { FAQ } from './components/FAQ';
@@ -28,6 +29,7 @@ const App: React.FC = () => {
         <ProblemSolution />
         <Features />
         <Pricing />
+        <PackInstalacion />
         <Transparency />
         <Promo />
         <FAQ />

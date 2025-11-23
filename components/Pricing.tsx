@@ -70,8 +70,8 @@ export const Pricing: React.FC = () => {
                     <div
                         key={idx}
                         className={`relative bg-slate-950/80 border rounded-2xl p-8 backdrop-blur-md transition-all duration-500 hover:scale-105 group ${plan.popular
-                                ? 'border-accent-500/60 shadow-[0_0_40px_rgba(245,158,11,0.2)] scale-105'
-                                : 'border-slate-700/30 hover:border-accent-500/40'
+                            ? 'border-accent-500/60 shadow-[0_0_40px_rgba(245,158,11,0.2)] scale-105'
+                            : 'border-slate-700/30 hover:border-accent-500/40'
                             }`}
                     >
                         {/* Popular Badge */}
@@ -122,14 +122,21 @@ export const Pricing: React.FC = () => {
                             href="#"
                             fullWidth
                             className={`${plan.popular
-                                    ? 'shadow-[0_0_20px_rgba(245,158,11,0.4)] hover:shadow-[0_0_30px_rgba(245,158,11,0.6)]'
-                                    : 'border-slate-700/40 text-slate-300 hover:border-accent-500/50'
+                                ? 'shadow-[0_0_20px_rgba(245,158,11,0.4)] hover:shadow-[0_0_30px_rgba(245,158,11,0.6)]'
+                                : 'border-slate-700/40 text-slate-300 hover:border-accent-500/50'
                                 }`}
                         >
                             Empezar prueba de 7 días
                         </Button>
                     </div>
                 ))}
+            </div>
+
+            {/* Note about VIP Pack */}
+            <div className="mt-12 text-center max-w-3xl mx-auto">
+                <p className="text-sm text-slate-400 italic">
+                    <strong>Nota:</strong> Para garantizar el éxito de tu negocio, todos los planes requieren el 'Pack de Puesta en Marcha VIP' inicial (Pago único). Ver detalles abajo.
+                </p>
             </div>
         </Section>
     );
