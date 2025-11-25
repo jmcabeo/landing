@@ -42,35 +42,26 @@ export const PackInstalacion: React.FC = () => {
 
                     {/* Title */}
                     <div className="text-center mb-8">
-                        <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
-                            Nosotros lo configuramos, tú solo facturas.
+                        <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight flex items-center justify-center gap-3">
+                            <span className="text-4xl">⚠️</span>
+                            <span>INFRAESTRUCTURA Y DESPEGUE</span>
                         </h2>
+                        <p className="text-sm text-red-300 uppercase font-semibold tracking-wide mb-4">
+                            (Requisito Obligatorio)
+                        </p>
                         <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-3xl mx-auto">
-                            Olvídate de tutoriales y configuraciones técnicas. Para asegurar resultados desde la primera semana, nuestro equipo te entrega el sistema <strong className="text-accent-400">LLAVE EN MANO</strong> en 48 horas.
+                            No entregamos sistemas vacíos. Para garantizar el rendimiento, nuestros ingenieros configuran tu infraestructura digital, diseñan tu web y calibran la agenda antes de darte el control.
                         </p>
                     </div>
 
                     {/* Price highlight */}
                     <div className="text-center mb-12">
                         <div className="inline-block bg-accent-500/10 border-2 border-accent-500/50 rounded-2xl px-8 py-6">
-                            <h3 className="text-2xl font-bold text-accent-400 mb-4">
-                                PACK PUESTA EN MARCHA VIP
-                            </h3>
-                            <div className="mb-3">
-                                <p className="text-slate-400 text-lg line-through">
-                                    Valor Real: 1.200€
-                                </p>
-                            </div>
                             <div className="mb-3">
                                 <p className="text-sm text-accent-300 uppercase font-semibold tracking-wide">
-                                    Precio Diciembre:
+                                    Configuración Integral + Web Profesional
                                 </p>
                                 <span className="text-6xl md:text-7xl font-bold text-white">297€</span>
-                            </div>
-                            <div className="inline-block px-4 py-2 bg-green-500/20 border border-green-500/50 rounded-lg">
-                                <p className="text-green-300 font-semibold">
-                                    (Ahorras 900€)
-                                </p>
                             </div>
                         </div>
                     </div>

@@ -1,59 +1,54 @@
 import React from 'react';
-import { Check, X } from 'lucide-react';
+import { Check, X, AlertTriangle } from 'lucide-react';
 import { Section } from './ui/Section';
 import { Button } from './ui/Button';
 
 export const Pricing: React.FC = () => {
     const plans = [
         {
-            name: 'OMNIA STARTER',
-            medal: '🥉',
-            subtitle: 'Para dejar el papel y boli',
+            name: 'STARTER',
+            subtitle: 'Motor Manual',
+            tagline: 'Digitalización esencial.',
             price: '69',
             price2025: '117',
             features: [
-                { text: 'Agenda Online 24/7 (Reservas auto)', included: true },
-                { text: 'App Móvil de Gestión (iOS/Android)', included: true },
-                { text: 'Base de Datos (CRM Automático)', included: true },
-                { text: 'Pagos Integrados (Señales/Bonos)', included: true },
-                { text: 'Bandeja Unificada (WhatsApp/IG/FB)', included: true },
-                { text: 'Sin Recordatorios Automáticos', included: false },
-                { text: 'Sin Gestión de Reseñas', included: false },
+                { text: 'Central de Reservas y App', included: true },
+                { text: 'Gestión vía Email (Recordatorios y Reseñas)', included: true },
+                { text: 'Base de Datos CRM', included: true },
+                { text: 'WhatsApp disponible (Envío Manual)', included: true, warning: true },
+                { text: 'Sin Automatización de WhatsApp', included: false },
             ],
-            popular: false
+            popular: false,
+            medal: '🥉'
         },
         {
-            name: 'OMNIA CRECIMIENTO',
-            medal: '🥈',
-            subtitle: 'La máquina de facturar. Elimina plantones',
+            name: 'GROWTH',
+            subtitle: 'Propulsión Automática',
+            tagline: '🔥 MÁXIMO RENDIMIENTO',
             price: '97',
             price2025: '165',
-            badge: '🔥 MÁS POPULAR',
             features: [
-                { text: 'Todo lo del Plan Starter incluido', included: true },
-                { text: 'Anti-Plantones: Recordatorios WhatsApp', included: true, highlight: true },
-                { text: 'Reputación Google: Reseñas automáticas', included: true, highlight: true },
-                { text: 'Reactivación: Recupera clientes antiguos', included: true, highlight: true },
-                { text: 'Gamificación: Ruleta de Premios', included: true, highlight: true },
-                { text: 'Chat Widget: Burbuja para tu web', included: true, highlight: true },
+                { text: 'Automatización WhatsApp Activada (Cero Plantones)', included: true, highlight: true },
+                { text: 'Solicitud de Reseñas por SMS/WhatsApp (Alta conversión)', included: true, highlight: true },
+                { text: 'Sistema de Reactivación Móvil', included: true, highlight: true },
+                { text: 'Widget Web Integrado', included: true, highlight: true },
             ],
-            popular: true
+            popular: true,
+            medal: '🥈'
         },
         {
-            name: 'OMNIA TOTAL IA',
-            medal: '🥇',
-            subtitle: 'Tu recepcionista digital con Inteligencia Artificial',
+            name: 'TOTAL AI',
+            subtitle: 'Inteligencia Central',
+            tagline: 'Autonomía Total con IA',
             price: '197',
             price2025: '335',
             features: [
-                { text: 'Todo lo del Plan Crecimiento incluido', included: true },
-                { text: 'Agente IA WhatsApp: Responde y agenda 24/7', included: true, highlight: true },
-                { text: 'Fidelización Wallet: Tarjetas en el móvil', included: true, highlight: true },
-                { text: 'Redes Sociales: Programador de contenido', included: true, highlight: true },
-                { text: 'Integraciones: Conexiones avanzadas', included: true, highlight: true },
-                { text: 'Reportes VIP: Métricas detalladas', included: true, highlight: true },
+                { text: 'Agente IA 24/7 (Responde y Agenda en WhatsApp)', included: true, highlight: true },
+                { text: 'Wallet Pass (Tarjeta digital en móvil)', included: true, highlight: true },
+                { text: 'Piloto Automático en Redes Sociales', included: true, highlight: true },
             ],
-            popular: false
+            popular: false,
+            medal: '🥇'
         }
     ];
 
@@ -77,18 +72,12 @@ export const Pricing: React.FC = () => {
                                 : 'border-slate-700/30 hover:border-accent-500/40'
                             }`}
                     >
-                        {/* Popular Badge */}
-                        {plan.badge && (
-                            <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-accent-500 text-slate-950 text-xs font-bold rounded-full flex items-center gap-2 shadow-lg">
-                                {plan.badge}
-                            </div>
-                        )}
-
                         {/* Header */}
                         <div className="text-center mb-8">
                             <div className="text-4xl mb-3">{plan.medal}</div>
                             <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                            <p className="text-sm text-slate-400 italic">{plan.subtitle}</p>
+                            <p className="text-sm text-slate-400 mb-2">({plan.subtitle})</p>
+                            <p className="text-xs text-accent-300 italic">{plan.tagline}</p>
                         </div>
 
                         {/* Price */}
@@ -113,7 +102,9 @@ export const Pricing: React.FC = () => {
                                     className={`flex items-start gap-3 ${feature.highlight ? 'text-white' : 'text-slate-300'
                                         }`}
                                 >
-                                    {feature.included ? (
+                                    {feature.warning ? (
+                                        <AlertTriangle className="w-5 h-5 shrink-0 mt-0.5 text-yellow-400" />
+                                    ) : feature.included ? (
                                         <Check className={`w-5 h-5 shrink-0 mt-0.5 ${feature.highlight ? 'text-accent-400' : 'text-primary-400'}`} />
                                     ) : (
                                         <X className="w-5 h-5 shrink-0 mt-0.5 text-slate-600" />
