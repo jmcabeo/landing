@@ -25,6 +25,11 @@ export const PackInstalacion: React.FC = () => {
             text: 'Importamos tu lista de clientes actual (Excel o Agenda) al sistema.'
         },
         {
+            emoji: '📱',
+            title: 'Automatización de Redes Sociales:',
+            text: 'Conectamos tus perfiles al Piloto Automático para programar y publicar contenido en tus redes sin esfuerzo manual.'
+        },
+        {
             emoji: '🎓',
             title: 'Formación Personalizada:',
             text: 'Sesión 1 a 1 por Zoom para enseñar a tu equipo a usar OMNIA.'
@@ -44,13 +49,10 @@ export const PackInstalacion: React.FC = () => {
                     <div className="text-center mb-8">
                         <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight flex items-center justify-center gap-3">
                             <span className="text-4xl">⚠️</span>
-                            <span>INFRAESTRUCTURA Y DESPEGUE</span>
+                            <span>OFERTA DE LANZAMIENTO: ACCESO FUNDADOR</span>
                         </h2>
-                        <p className="text-sm text-red-300 uppercase font-semibold tracking-wide mb-4">
-                            (Requisito Obligatorio)
-                        </p>
                         <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-3xl mx-auto">
-                            No entregamos sistemas vacíos. Para garantizar el rendimiento, nuestros ingenieros configuran tu infraestructura digital, diseñan tu web y calibran la agenda antes de darte el control.
+                            Esta condición es una anomalía única de lanzamiento. El coste real de esta infraestructura es de 1.497€. Una vez cerremos el cupo de fundadores, este precio no volverá a repetirse jamás.
                         </p>
                     </div>
 
@@ -58,10 +60,17 @@ export const PackInstalacion: React.FC = () => {
                     <div className="text-center mb-12">
                         <div className="inline-block bg-accent-500/10 border-2 border-accent-500/50 rounded-2xl px-8 py-6">
                             <div className="mb-3">
-                                <p className="text-sm text-accent-300 uppercase font-semibold tracking-wide">
-                                    Configuración Integral + Web Profesional
+                                <p className="text-sm text-slate-400 uppercase font-semibold tracking-wide line-through">
+                                    VALOR REAL DE LA INFRAESTRUCTURA: 1.497€
                                 </p>
+                            </div>
+                            <div className="mb-3">
                                 <span className="text-6xl md:text-7xl font-bold text-white">297€</span>
+                            </div>
+                            <div>
+                                <p className="text-accent-300 font-semibold">
+                                    (Pago único de acceso. Ahorras 1.200€)
+                                </p>
                             </div>
                         </div>
                     </div>
