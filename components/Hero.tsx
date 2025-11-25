@@ -102,8 +102,8 @@ export const Hero: React.FC = () => {
       {/* 2. Main Title Area */}
       <div className="relative z-20 text-center max-w-5xl mx-auto">
         <h1 className="text-3xl md:text-5xl font-bold text-white mb-8 leading-tight drop-shadow-2xl">
-          Tu Negocio, <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-300 via-accent-400 to-accent-500 drop-shadow-[0_0_35px_rgba(245,158,11,0.6)]">Operando</span><br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-300 via-accent-400 to-accent-500 drop-shadow-[0_0_35px_rgba(245,158,11,0.6)]">en Piloto Automático</span>
+          Tu Negocio, <span className="text-accent-400 drop-shadow-[0_0_35px_rgba(245,158,11,0.6)]">Operando</span><br />
+          <span className="text-accent-400 drop-shadow-[0_0_35px_rgba(245,158,11,0.6)]">en Piloto Automático</span>
         </h1>
 
         <p className="text-lg md:text-xl text-slate-300 mb-8 max-w-3xl mx-auto font-light leading-relaxed drop-shadow-md">
