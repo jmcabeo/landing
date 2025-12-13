@@ -65,11 +65,11 @@ export const PackInstalacion: React.FC = () => {
                                 </p>
                             </div>
                             <div className="mb-3">
-                                <span className="text-6xl md:text-7xl font-bold text-white">297€</span>
+                                <span className="text-6xl md:text-7xl font-bold text-white">497€</span>
                             </div>
                             <div>
                                 <p className="text-accent-300 font-semibold">
-                                    (Pago único de acceso. Ahorras 1.200€)
+                                    (Pago único de acceso. Ahorras 1.000€)
                                 </p>
                             </div>
                         </div>
